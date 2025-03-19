@@ -1,0 +1,52 @@
+{
+  "events": [
+    {
+      "eventId": "start",
+      "description": "쓰레기촌에서 눈을 떴다. 오늘 물자를 구하지 못하면 쫓겨난다.",
+      "options": [
+        {
+          "text": "폐허로 출발한다",
+          "nextEvent": "zombie_encounter"
+        },
+        {
+          "text": "마을에 남는다",
+          "nextEvent": "game_over"
+        }
+      ]
+    },
+    {
+      "eventId": "zombie_encounter",
+      "description": "좀비가 나타났다! 공포가 너를 집어삼킨다.",
+      "options": [
+        {
+          "text": "싸운다",
+          "nextEvent": "fight_result"
+        },
+        {
+          "text": "도망친다",
+          "nextEvent": "escape_result"
+        }
+      ]
+    },
+    {
+      "eventId": "zombie_encounter",
+      "description": "좀비가 나타났다! 공포가 너를 집어삼킨다.",
+      "options": [
+        {
+          "text": "싸운다",
+          "requiredStat": "strength",
+          "successChance": 50,
+          "successEvent": "fight_success",
+          "failEvent": "fight_fail"
+        },
+        {
+          "text": "도망친다",
+          "requiredStat": "agility",
+          "successChance": 60,
+          "successEvent": "escape_success",
+          "failEvent": "escape_fail"
+        }
+      ]
+    }
+  ]
+}

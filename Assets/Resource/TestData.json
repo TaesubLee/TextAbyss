@@ -6,25 +6,11 @@
       "options": [
         {
           "text": "폐허로 출발한다",
-          "nextEvent": "zombie_encounter"
+          "successEvent": "zombie_encounter"
         },
         {
           "text": "마을에 남는다",
-          "nextEvent": "game_over"
-        }
-      ]
-    },
-    {
-      "eventId": "zombie_encounter",
-      "description": "좀비가 나타났다! 공포가 너를 집어삼킨다.",
-      "options": [
-        {
-          "text": "싸운다",
-          "nextEvent": "fight_result"
-        },
-        {
-          "text": "도망친다",
-          "nextEvent": "escape_result"
+          "successEvent": "game_over"
         }
       ]
     },
@@ -38,13 +24,31 @@
           "successChance": 50,
           "successEvent": "fight_success",
           "failEvent": "fight_fail"
-        },
+        }
+      ]
+    },
+    {
+      "eventId": "game_over",
+      "description": "너의 이야기는 여기서 끝났다.",
+      "options": []
+    },
+    {
+      "eventId": "fight_success",
+      "description": "좀비를 쓰러뜨렸다!",
+      "options": [
         {
-          "text": "도망친다",
-          "requiredStat": "agility",
-          "successChance": 60,
-          "successEvent": "escape_success",
-          "failEvent": "escape_fail"
+          "text": "다시 시작",
+          "successEvent": "start"
+        }
+      ]
+    },
+    {
+      "eventId": "fight_fail",
+      "description": "좀비에게 물렸다...",
+      "options": [
+        {
+          "text": "다시 시작",
+          "successEvent": "start"
         }
       ]
     }

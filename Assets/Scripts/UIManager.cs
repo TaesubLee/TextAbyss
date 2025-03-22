@@ -21,9 +21,9 @@ public class UIManager : MonoBehaviour
 
     void UpdateStatsDisplay()
     {
-        statsText.text = $"Ã¼·Â: {playerStats.health} | Á¤½Å·Â: {playerStats.sanity}\n" +
-                         $"Èû: {playerStats.strength} | ¹ÎÃ¸: {playerStats.agility}\n" +
-                         $"Áö·Â: {playerStats.intellect} | ¿î: {playerStats.luck}";
+        statsText.text = $"Ã¼·Â: {playerStats.health}  Á¤½Å·Â: {playerStats.sanity}\n" +
+                         $"Èû: {playerStats.strength} | ¹ÎÃ¸: {playerStats.agility} | Áö·Â: {playerStats.intellect} | ¿î: {playerStats.luck}\n";
+                         
     }
 
     public void ShowGameOver()

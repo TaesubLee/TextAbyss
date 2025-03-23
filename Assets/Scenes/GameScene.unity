@@ -1937,12 +1937,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b4bb4c6d2ca4a43b6a34df27f87301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  sanity: 100
-  strength: 10
-  agility: 10
-  intellect: 10
-  luck: 10
+  health: 0
+  sanity: 0
+  strength: 0
+  agility: 0
+  intellect: 0
+  luck: 0
 --- !u!1 &1600840706
 GameObject:
   m_ObjectHideFlags: 0
